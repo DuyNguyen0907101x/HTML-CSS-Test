@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  &:active,
+  &.active {
+    color: #0056b3;
+  }
+}

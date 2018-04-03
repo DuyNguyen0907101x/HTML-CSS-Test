@@ -1,0 +1,26 @@
+// ======================================================
+// Layout :: Header
+// ======================================================
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  background-color: #21252b;
+  z-index: 9999;
+  color: #949494;
+
+  @include flexbox();
+
+  @include flex-direction(column);
+
+  @include justify-content(center);
+
+  &__btn-signup {
+    padding: 8px 16px;
+    margin-left: 20px;
+    text-transform: uppercase;
+  }
+}

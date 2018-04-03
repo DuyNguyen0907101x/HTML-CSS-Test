@@ -1,0 +1,202 @@
+include modules/head/head
+include modules/header/header
+
+doctype html
+html
+  +head(head.home)
+  body
+    header.header
+      div.container--fluid
+        div.container__row.flex.flex--align-items-center
+          div.container__col-9.container__col-sm-5.container__col-md-4.container__col-lg-3
+            img(src='./images/logo.jpg').img--fluid
+          div.hidden-md-down.container__col-md-8.container__col-lg-9.flex.flex--content-end
+            h5.header__text Don't have a PW account?
+              button.btn.btn-primary.header__btn-signup Signup
+          div.container__col-3.container__col-sm-2.container__col-sm-offset-5.hidden-md-up
+              button(id='open') Burger
+
+    div.page-layout.flex
+
+      div.page-layout__side-bar
+        //- button(id='close') 
+        ul.list.list--collapsable
+          li.list__heading Payalto
+          li.list__item
+            a(href='#digital-goods') Digital Goods
+            ul.list__sub-list
+              li
+                a(href='#store-widget-call') Stored Widget Call
+              li  
+                a(href='#') Non-stored Widget Call
+              li
+                a(href='#') Optional Parameters
+          li.list__item
+            a(href='') Virtual Currency
+            ul.list__sub-list
+              li
+                a(href='#') Widget Call
+          li.list__item
+            a(href='#') Callback
+          li.list__item
+            a(href='#') Pingback Progress
+            ul.list__sub-list
+              li
+                a(href='#') Introduction
+                a(href='#') HTTP Pingback
+                a(href='#') Email Pingback
+                a(href='#') Expect Response
+
+        ul.list.list--collapsable
+          li.list__heading Brick
+          li.list__item
+            a(href='#') Create One-time Sheet
+          li.list__item
+            a(href='#') Charge
+          li.list__item
+            a(href='#') Subscription
+
+        ul.list.list--collapsable
+          li.list__heading Mint
+          li.list__item
+            a(href='#') Get Epin
+          li.list__item
+            a(href='#') Get Balance
+          li.list__item
+            a(href='#') Get Available Balance
+          li.list__item
+            a(href='#') Redemption
+
+        ul.list.list--collapsable
+          li.list__heading Mobiamo
+          li.list__item
+            a(href='#') Price Points
+
+        ul.list.list--collapsable
+          li.list__heading Tools API
+          li.list__item
+            a(href='#') Bridge OAuth
+          li.list__item
+            a(href='#') Cancellation
+          li.list__item
+            a(href='#') Coupons
+          li.list__item
+            a(href='#') Delivery Confirmation
+          li.list__item
+            a(href='#') Invoice
+          li.list__item
+            a(href='#') Payment Status
+          li.list__item
+            a(href='#') Payment System
+          li.list__item
+            a(href='#') Bridge OAuth
+          li.list__item
+            a(href='#') Product Details
+          li.list__item
+            a(href='#') Reporting
+          li.list__item
+            a(href='#') User Profile
+
+      div.page-layout__content
+        div.container--fluid
+          div.container__row
+            div.container__col-12.col-md-7.container__col-lg-7.section-doc
+              article(id='digital-goods')
+                h1.heading--big Digital Goods
+                p Digital Goods API is mainly focused on selling In-game virtual items, services and premium membership with PayAlto.
+
+              article(id='store-widget-call')
+                h3 Store widget call
+                p Its show a widget, where stored products in Products section of Merchant Account are available for payment. Both subscription and one-time payment are supported in our products section.
+
+              article
+                h5 Parameters:
+                table.table.table--striped
+                  thead
+                    tr
+                      th Name
+                      th Required
+                      th Format
+                      th Description
+                  tbody
+                    tr
+                      td key
+                      td yes
+                      td String(32)
+                      td Sample: 048c51f8fc834a1467db96b683f16e70
+                        br
+                        | Can be found in German Settings of the Project inside your Merchant Account
+                    tr
+                      td uid
+                      td yes
+                      td String(64)
+                      td Sample: test@paymentwall.com
+                        br
+                        | Not case sensitive.
+                        | ID of the end-user in your system (usually it is an email) who is viewing the widget. The maximum length is 64.
+                    tr
+                      td widget
+                      td yes
+                      td String
+                      td Sample: p1_1
+                        br
+                        | Widget code. Can be obtained by Merchant Account -> Projects -> Widgets
+                    tr
+                      td email
+                      td yes
+                      td String
+                      td Sample: test@paymentwall.com
+                        br
+                        | Paymentwall will automatically send a payment receipt to the user
+                    tr
+                      td timestamp
+                      td yes
+                      td String(10)
+                      td Sample: 1477985778
+                        br
+                        | Unix timestamp of the current date
+                    tr
+                      td sign_version
+                      td no
+                      td String
+                      td Sample: test@paymentwall.com
+                        br
+                        | Sample: 2, 3
+                        | Signature version
+                    tr
+                      td sign
+                      td no
+                      td String
+                      td Sample: 7633c3b060fa2ddd41283ffd4629ab40
+                        br
+                        | Refer to
+                        a(href='') Signature Calculation
+              
+              article
+                h3 Results:
+                p You will get a URL or iframe by widget object:
+                table.table
+                  tbody
+                    tr
+                      td 
+                        p plan
+                        p.text--primary string
+                      td Identifies the product ID, send back as goodsid parameter in
+                        a(href='') pingbacks
+                        | . eg: productax123
+                    tr
+                      td
+                        p period
+                        p required
+                        p string
+                      td day/week/month/year
+                    tr
+                      td
+                        p period duration
+                        p.text--danger required
+                        p.text--primary string
+                      td Number of peroids mention the period parameters. By default minimum duration for recurring in 3 days. This can be adjusted by contacting
+                        a(href='#') devsupport@paymentwall.com
+            div.hidden-md-down.col-md-5.container__col-lg-5.section__api-implement
+              h2 API
+    script(src='./js/main.js')

@@ -1,0 +1,37 @@
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.btn-primary {
+  color: #949494;
+  background-color: transparent;
+  border-color: #949494;
+  transition: all .25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: #949494;
+  background-color: #f3f2f5;
+  border-color: #949494;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: transparent;
+  border-color: #949494;
+}

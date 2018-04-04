@@ -1,9 +1,13 @@
+// side-bar menu toggle
 $(function() {
-  $('#open').on('click', function() {
-    $('.page-layout__side-bar').addClass('page-layout__side-bar--opened');
-  });
-  $('#close').on('click', function() {
-    $('.page-layout__side-bar').removeClass('page-layout__side-bar--opened');
+  $('.hamburger-icon').on('click', function() {
+    if ($(this).hasClass('toggled')) {
+      $('.page-layout__side-bar').removeClass('opened');
+    } else {
+      $('.page-layout__side-bar').addClass('opened');
+    }
+
+    $(this).toggleClass('toggled');
   });
 });
 
@@ -32,7 +36,7 @@ $(function() {
         $(this).addClass('active');
 
         var $subList = $(this).closest('.list__item').children('.list__sub-list');
-        
+
         if ($subList.is(':visible')) {
           $subList.slideUp();
         } else {
@@ -41,7 +45,7 @@ $(function() {
 
         scrollTo($(this).attr('href'));
       });
-    
+
     // set active class on sub-list item clicked
     var $subListItems = this.find('.list__sub-list a');
     $subListItems.on('click', function(e) {

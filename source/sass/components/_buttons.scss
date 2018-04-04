@@ -14,24 +14,24 @@
   user-select: none;
 }
 
-.btn-primary {
+.btn--primary {
   color: #949494;
   background-color: transparent;
   border-color: #949494;
   transition: all .25s ease;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
+.btn--primary:hover,
+.btn--primary:focus,
+.btn--primary:active,
+.btn--primary.active {
   color: #949494;
   background-color: #f3f2f5;
   border-color: #949494;
 }
 
-.btn-primary.disabled,
-.btn-primary[disabled] {
+.btn--primary.disabled,
+.btn--primary[disabled] {
   background-color: transparent;
   border-color: #949494;
 }

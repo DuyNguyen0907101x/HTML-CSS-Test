@@ -4,7 +4,7 @@
   $side-bar-width-sm: 224px;
   $side-bar-padding: 16px 36px 20px 40px;
 
-  max-width: 1400px;
+  // max-width: 1400px;
 
   &__side-bar {
     background-color: #f9fcfd;
@@ -21,10 +21,7 @@
 
   &__content {
     margin-top: $header-height;
-    // background-color: #21252b;
-    // padding: 15px;
     background-color: #fff;
-    // box-sizing: border-box;
   }
 
   @media screen and (min-width: 768px) {
@@ -45,7 +42,7 @@
       bottom: 0;
       padding: 0;
 
-      &--opened {
+      &.opened {
         width: $side-bar-width-sm;
         padding: $side-bar-padding;
       }
@@ -60,8 +57,13 @@
     background-color: #fff;
     padding: 12px 26px;
 
-    .heading--big {
+    .heading--lg {
       font-size: 3rem;
+      font-weight: 400;
+    }
+
+    .heading--md {
+      font-size: 1.25rem;
       font-weight: 400;
     }
 
@@ -71,13 +73,19 @@
         line-height: 2.25;
       }
     }
+  }
 
-    .text--primary {
-      color: #9fa3a6;
-    }
+  .section__api-implement {
+    background-color: #22252c;
+  }
+}
 
-    .text--danger {
-      color: #f46227;
-    }
+.tab {
+  &__links {
+    width: 100%;
+    overflow-x: auto;
+  }
+  &__link {
+    display: inline-block;
   }
 }

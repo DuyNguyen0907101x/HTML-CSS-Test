@@ -39,7 +39,7 @@
     "gulp-stylelint": "^6.0.0",
     "gulp-watch": "^4.3.9",
     "install": "^0.8.1",
-    "jquery": "2.2.1",
+    "jquery": "3.3.0",
     "npm": "^3.10.6",
     "pug": "^2.0.0-beta6",
     "run-sequence": "^1.2.2",

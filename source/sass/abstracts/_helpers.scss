@@ -137,3 +137,21 @@
 .flex--order-three {
   order: 3;
 }
+
+.text {
+  &--primary {
+    color: #9fa3a6;
+  }
+
+  &--danger {
+    color: #f46227;
+  }
+
+  &--variable {
+    color: #f93078;
+    background-color: #f9fafe;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    padding: 2px 4px;
+  }
+}

@@ -2,11 +2,18 @@
 // Components :: Tables
 // ======================================================
 
+.table--responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
 .table {
   border-spacing: 0;
   border-collapse: collapse;
   font-size: .825rem;
   margin-bottom: 20px;
+  line-height: 1.42857143;
 
   th,
   td {

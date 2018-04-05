@@ -56,23 +56,31 @@ $(function() {
 
       scrollTo($(this).attr('href'));
     });
-
-    // console.log(123455)
-    // this.find('a').on('click', function(e) {
-    //   console.log('jere')
-    //   e.preventDefault();
-    //   scrollTo($(this).attr('href'));
-    // });
-
-    // scrollTo(id) {
-      // var $headerHeight = 76;
-      // if (id && id !== '#') {
-      //   $('html, body').animate({
-      //     scrollTop: $(id).offset().top - $headerHeight
-      //   }, 500);
-      // }
-    // }
   };
 
   $('.list--collapsable').collapsableList();
+});
+
+// tab menu
+$(function() {
+  $.fn.tabs = function() {
+    this.find('.tab__link').on('click', function(e) {
+      e.preventDefault();
+      if ($(this).hasClass('active')) {
+        $($(this).attr('href')).hide();
+      } else {
+        $('.tab__content').hide();
+        $($(this).attr('href')).show();
+      }
+
+      $('.tab__link').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    this.find('.tab__link:first-child').trigger('click');
+  };
+
+  // console.log($('.tab'))
+
+  $('.tab').tabs();
 });

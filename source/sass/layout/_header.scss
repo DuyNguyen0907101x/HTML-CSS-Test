@@ -18,7 +18,7 @@
 
   @include justify-content(center);
 
-  &__btn-signup {
+  .btn-signup {
     padding: 8px 16px;
     margin-left: 20px;
     text-transform: uppercase;
@@ -26,14 +26,6 @@
 
   .hamburger-icon {
     display: inline-block;
-    // background-color: #949494;
-    // span {
-    //   display: block;
-    // }
-    // width: 35px;
-    // height: 5px;
-    // background-color: black;
-    // margin: 6px 0;
 
     &__bar-1,
     &__bar-2,
@@ -44,18 +36,6 @@
       margin: 6px 0;
       transition: .4s;
     }
-
-    // &__bar-1--changed {
-    //   transform: rotate(-45deg) translate(-9px, 6px);
-    // }
-    //
-    // &__bar-2--changed {
-    //   opacity: 0;
-    // }
-    //
-    // &__bar-3--changed {
-    //   transform: rotate(45deg) translate(-8px, -8px);
-    // }
   }
 
   .toggled {

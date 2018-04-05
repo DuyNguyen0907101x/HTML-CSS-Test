@@ -3,16 +3,16 @@ include modules/header/header
 
 doctype html
 html
-  +head(head.home)
+  +head(head.api)
   body
     header.header
       div.container--fluid
         div.container__row.flex.flex--align-items-center
-          div.container__col-9.container__col-sm-5.container__col-md-4.container__col-lg-3
+          div.container__col-9.container__col-sm-5.container__col-md-3.container__col-lg-3
             img(src='./images/logo.jpg').img--fluid
-          div.hidden-md-down.container__col-md-8.container__col-lg-9.flex.flex--content-end
+          div.hidden-md-down.container__col-md-9.container__col-lg-9.flex.flex--content-end
             h5.header__text Don't have a PW account?
-              button.btn.btn--primary.header__btn-signup Signup
+              button.btn.btn--primary.btn-signup Signup
           div.container__col-3.container__col-sm-2.container__col-sm-offset-5.hidden-md-up.flex.flex--content-end
               div(id='open').hamburger-icon
                 div.hamburger-icon__bar-1
@@ -22,7 +22,6 @@ html
     div.page-layout.flex
 
       div.page-layout__side-bar
-        //- button(id='close') 
         ul.list.list--collapsable
           li.list__heading Payalto
           li.list__item
@@ -205,17 +204,45 @@ html
                         td Number of peroids mention the period parameters. By default minimum duration for recurring in 3 days. This can be adjusted by contacting
                           a(href='#') devsupport@paymentwall.com
             div.hidden-md-down.col-md-5.container__col-lg-5.section__api-implement
-              div.tab__links
-                a(href='#javascript').tab__link Javascript
-                a(href='#java').tab__link Java
-                a(href='#php').tab__link PHP
-                a(href='#net').tab__link .Net
-                a(href='#python').tab__link Python
-              div.tab__content
-                div(id='#javascript')
-                  h1 Javascript
-                div(id='#java')
-                  h1 Java
-                div(id='#php')
-                  h1 PHP
+              div.tab
+                div.tab__links
+                  a(href='#javascript').tab__link Javascript
+                  a(href='#java').tab__link Java
+                  a(href='#php').tab__link PHP
+                  a(href='#net').tab__link .Net
+                  a(href='#python').tab__link Python
+                div(id='javascript').tab__content
+                  h4.heading Library:
+                  p
+                    a(href='#') https://github.com/paymentwall/paymentwall-javascript
+                  h4.heading Request URL:
+                  p
+                    a(href='#') https://api.paymentwall.com/api/subscription/
+                  h4.heading Request method:
+                  p
+                    a(href='#') https://api.paymentwall.com/api/subscription/
+                div(id='java').tab__content
+                  h4.heading Library:
+                  p
+                    a(href='#') https://github.com/paymentwall/paymentwall-java
+                  h4.heading Request URL:
+                  p
+                    a(href='#') https://api.paymentwall.com/api/subscription/
+                  h4.heading Request method:
+                  p
+                    a(href='#') https://api.paymentwall.com/api/subscription/
+                div(id='php').tab__content
+                  h4.heading Library:
+                  p
+                    a(href='#') https://github.com/paymentwall/paymentwall-php
+                  h4.heading Request URL:
+                  p
+                    a(href='#') https://api.paymentwall.com/api/subscription/
+                  h4.heading Request method:
+                  p
+                    a(href='#') https://api.paymentwall.com/api/subscription/
+
+              h4.heading Store widget call
+
+              h4.heading Result example
     script(src='./js/main.js')

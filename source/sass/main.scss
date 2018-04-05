@@ -1,6 +1,4 @@
-// We architecting this project follow as the "7-1 Pattern" (7 folders, 1 file)
-// For more detail about this pattern
-// (https://sass-guidelin.es/#the-7-1-pattern)
+// "7-1 Pattern" (7 folders, 1 file)
 
 // 1. Abstracts
 // ------------
@@ -32,6 +30,7 @@
 @import 'components/table';
 @import 'components/buttons';
 @import 'components/list-collapsable';
+@import 'components/tab';
 
 // 6. Pages
 // --------
@@ -40,4 +39,3 @@
 
 // 7. Themes
 // ---------
-// We just have only 1 theme in this project

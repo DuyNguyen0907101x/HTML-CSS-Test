@@ -77,15 +77,10 @@
 
   .section__api-implement {
     background-color: #22252c;
-  }
-}
+    padding: 0;
 
-.tab {
-  &__links {
-    width: 100%;
-    overflow-x: auto;
-  }
-  &__link {
-    display: inline-block;
+    .heading {
+      color: #fff;
+    }
   }
 }

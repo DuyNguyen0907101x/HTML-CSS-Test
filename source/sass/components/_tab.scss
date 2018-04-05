@@ -1,0 +1,48 @@
+.tab {
+  $tab-link-bg-color: #282c35;
+  $tab-link-bg-color-active: lighten($tab-link-bg-color, 5%);
+  $tab-link-color: #f3ba15;
+  $tab-link-color-active: lighten($tab-link-color, 20%);
+
+  &__links {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    background-color: $tab-link-bg-color;
+  }
+  &__link {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 20px 0;
+    color: $tab-link-color;
+    border-bottom: 2px solid transparent;
+    transition: all .25s;
+
+    &:hover {
+      text-decoration: none;
+      color: $tab-link-color-active;
+      background-color: $tab-link-bg-color-active;
+    }
+
+    &:active,
+    &.active {
+      color: $tab-link-color-active;
+      border-bottom: 2px solid $tab-link-color;
+    }
+  }
+  &__content {
+    display: none;
+    padding: 30px 20px;
+    animation: fade 1s;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

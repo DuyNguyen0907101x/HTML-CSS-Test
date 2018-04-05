@@ -24,8 +24,9 @@
     text-transform: uppercase;
   }
 
-  .hamburger-icon {
+  .btn-hamburger {
     display: inline-block;
+    cursor: pointer;
 
     &__bar-1,
     &__bar-2,
@@ -39,7 +40,7 @@
   }
 
   .toggled {
-    .hamburger-icon {
+    .btn-hamburger {
       &__bar-1 {
         transform: rotate(-45deg) translate(-9px, 7px);
       }

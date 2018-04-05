@@ -5,19 +5,7 @@ doctype html
 html
   +head(head.api)
   body
-    header.header
-      div.container--fluid
-        div.container__row.flex.flex--align-items-center
-          div.container__col-9.container__col-sm-5.container__col-md-3.container__col-lg-3
-            img(src='./images/logo.jpg').img--fluid
-          div.hidden-md-down.container__col-md-9.container__col-lg-9.flex.flex--content-end
-            h5.header__text Don't have a PW account?
-              button.btn.btn--primary.btn-signup Signup
-          div.container__col-3.container__col-sm-2.container__col-sm-offset-5.hidden-md-up.flex.flex--content-end
-              div(id='open').hamburger-icon
-                div.hamburger-icon__bar-1
-                div.hamburger-icon__bar-2
-                div.hamburger-icon__bar-3
+    +header()
 
     div.page-layout.flex
 
@@ -102,7 +90,7 @@ html
       div.page-layout__content
         div.container--fluid
           div.container__row
-            div.container__col-12.col-md-7.container__col-lg-7.section-doc
+            div.container__col-12.col-md-7.container__col-lg-7.section__doc
               article(id='digital-goods')
                 h1.heading--lg Digital Goods
                 p Digital Goods API is mainly focused on selling In-game virtual items, services and premium membership with PayAlto.
@@ -221,6 +209,14 @@ html
                   h4.heading Request method:
                   p
                     a(href='#') https://api.paymentwall.com/api/subscription/
+                  h4.heading Initialize
+                  img(src='images/api_1.jpg').img--fluid
+
+                  h4.heading Store widget call
+                  img(src='images/api_2.jpg').img--fluid
+                  
+                  h4.heading Result example
+                  img(src='images/api_3.jpg').img--fluid
                 div(id='java').tab__content
                   h4.heading Library:
                   p
@@ -231,6 +227,15 @@ html
                   h4.heading Request method:
                   p
                     a(href='#') https://api.paymentwall.com/api/subscription/
+                  
+                  h4.heading Initialize
+                  img(src='images/api_1.jpg').img--fluid
+                  
+                  h4.heading Store widget call
+                  img(src='images/api_2.jpg').img--fluid
+                  
+                  h4.heading Result example
+                  img(src='images/api_3.jpg').img--fluid
                 div(id='php').tab__content
                   h4.heading Library:
                   p
@@ -241,8 +246,14 @@ html
                   h4.heading Request method:
                   p
                     a(href='#') https://api.paymentwall.com/api/subscription/
-
-              h4.heading Store widget call
-
-              h4.heading Result example
+                  
+                  h4.heading Initialize
+                  img(src='images/api_1.jpg').img--fluid
+                  
+                  h4.heading Store widget call
+                  img(src='images/api_2.jpg').img--fluid
+                  
+                  h4.heading Result example
+                  img(src='images/api_3.jpg').img--fluid
+                    
     script(src='./js/main.js')

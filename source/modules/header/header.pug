@@ -1,2 +1,14 @@
-mixin header(page)
+mixin header()
   header.header
+    div.container--fluid
+      div.container__row.flex.flex--align-items-center
+        div.container__col-9.container__col-sm-5.container__col-md-3.container__col-lg-2
+          img(src='./images/logo.jpg').img--fluid
+        div.hidden-md-down.container__col-md-9.container__col-lg-10.flex.flex--content-end
+          h5.header__text Don't have a PW account?
+            button.btn.btn--primary.btn-signup Signup
+        div.container__col-3.container__col-sm-2.container__col-sm-offset-5.hidden-md-up.flex.flex--content-end
+            div(id='open').btn-hamburger
+              div.btn-hamburger__bar-1
+              div.btn-hamburger__bar-2
+              div.btn-hamburger__bar-3

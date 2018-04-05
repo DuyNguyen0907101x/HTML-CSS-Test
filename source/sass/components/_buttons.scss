@@ -2,7 +2,7 @@
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.428571429;
   text-align: center;
@@ -15,9 +15,9 @@
 }
 
 .btn--primary {
-  color: #949494;
-  background-color: transparent;
-  border-color: #949494;
+  color: $btn-primary-color;
+  background-color: $btn-primary-bg-color;
+  border-color: $btn-primary-border-color;
   transition: all .25s ease;
 }
 
@@ -25,13 +25,13 @@
 .btn--primary:focus,
 .btn--primary:active,
 .btn--primary.active {
-  color: #949494;
-  background-color: #f3f2f5;
-  border-color: #949494;
+  color: $btn-primary-color;
+  background-color: $btn-primary-bg-color-hover;
+  border-color: $btn-primary-border-color-hover;
 }
 
 .btn--primary.disabled,
 .btn--primary[disabled] {
-  background-color: transparent;
-  border-color: #949494;
+  background-color: $btn-primary-bg-color;
+  border-color: $btn-primary-border-color-hover;
 }

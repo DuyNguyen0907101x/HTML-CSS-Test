@@ -1,20 +1,7 @@
-// side-bar menu toggle
-$(function() {
-  $('.hamburger-icon').on('click', function() {
-    if ($(this).hasClass('toggled')) {
-      $('.page-layout__side-bar').removeClass('opened');
-    } else {
-      $('.page-layout__side-bar').addClass('opened');
-    }
-
-    $(this).toggleClass('toggled');
-  });
-});
-
-//collapsable list plugin
-$(function() {
+(function($) {
   $.fn.collapsableList = function() {
     var $headerHeight = 76;
+
     var scrollTo = function(id) {
       if (id && id !== '#') {
         $('html, body').animate({
@@ -22,9 +9,6 @@ $(function() {
         }, 500);
       }
     };
-
-    // hide all sub-lists by default
-    this.find('.list__sub-list').hide();
 
     // expand/collapse sub-list when click on item
     var $listItems = this.find('.list__item > a');
@@ -57,30 +41,4 @@ $(function() {
       scrollTo($(this).attr('href'));
     });
   };
-
-  $('.list--collapsable').collapsableList();
-});
-
-// tab menu
-$(function() {
-  $.fn.tabs = function() {
-    this.find('.tab__link').on('click', function(e) {
-      e.preventDefault();
-      if ($(this).hasClass('active')) {
-        $($(this).attr('href')).hide();
-      } else {
-        $('.tab__content').hide();
-        $($(this).attr('href')).show();
-      }
-
-      $('.tab__link').removeClass('active');
-      $(this).addClass('active');
-    });
-
-    this.find('.tab__link:first-child').trigger('click');
-  };
-
-  // console.log($('.tab'))
-
-  $('.tab').tabs();
-});
+})(jQuery);

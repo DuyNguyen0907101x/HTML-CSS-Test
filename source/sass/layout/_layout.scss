@@ -4,8 +4,6 @@
   $side-bar-width-sm: 224px;
   $side-bar-padding: 16px 36px 20px 40px;
 
-  // max-width: 1400px;
-
   &__side-bar {
     background-color: #f9fcfd;
     width: 0;
@@ -53,34 +51,40 @@
     }
   }
 
-  .section-doc {
-    background-color: #fff;
-    padding: 12px 26px;
-
-    .heading--lg {
-      font-size: 3rem;
-      font-weight: 400;
-    }
-
-    .heading--md {
-      font-size: 1.25rem;
-      font-weight: 400;
-    }
-
+  .section {
     article {
       margin-bottom: 30px;
       > p {
         line-height: 2.25;
       }
     }
-  }
 
-  .section__api-implement {
-    background-color: #22252c;
-    padding: 0;
+    &__doc {
+      background-color: #fff;
+      padding: 12px 26px;
 
-    .heading {
-      color: #fff;
+      .heading--lg {
+        font-family: 'proxima_nova_ltthin', Georgia, sans-serif;
+        font-size: 3rem;
+        font-weight: 400;
+      }
+
+      .heading--md {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+    &__api-implement {
+      background-color: #22252c;
+      padding: 0;
+
+      .heading {
+        color: #fff;
+      }
+
+      .img--fluid {
+        margin: 15px 0;
+      }
     }
   }
 }
